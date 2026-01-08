@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEZWANIE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SCENA I: PUSTKA -->
+    <div id="scene1" class="scene active">
+        <h1 id="main-title">POLICZ SWOJE POZOSTAŁE UDERZENIA SERCA.</h1>
+    </div>
+
+    <!-- SCENA II: SPOWIEDŹ -->
+    <div id="scene2" class="scene">
+        <input type="text" id="birthdate-input" placeholder="DD . MM . RRRR">
+        <button id="submit-button">[ Zobacz Swój Wyrok ]</button>
+    </div>
+
+    <!-- SCENA III: WYROK -->
+    <div id="scene3" class="scene">
+        <div class="counter-group">
+            <h2>UDERZENIA ZMARNOWANE:</h2>
+            <p id="wasted-beats">0</p>
+        </div>
+        <div class="counter-group">
+            <h2>UDERZENIA POZOSTAŁE:</h2>
+            <p id="remaining-beats">0</p>
+        </div>
+    </div>
+
+    <!-- SCENA IV: INCEPCJA -->
+    <div id="scene4" class="scene">
+        <div class="inception-container">
+            <p class="inception-text">To jest twój prawdziwy zegar. Nie tyka co sekundę. Tyka z każdym uderzeniem twojego serca.</p>
+            <p class="inception-text">Każdy akt dbania o ciało dodaje do niego cenne uderzenia.</p>
+            <p class="inception-text">Każdy akt samozniszczenia kradnie je bezpowrotnie.</p>
+            <p class="inception-text"><strong>Jesteś gotów, by przestać marnować czas?</strong></p>
+            <p class="inception-text"><strong>Jesteś gotów, by stać się Architektem swojego przeznaczenia?</strong></p>
+            <button id="redirect-button">[ Chcę Odzyskać Swój Czas ]</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

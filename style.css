@@ -1,0 +1,124 @@
+/* Import Czcionki i Reset */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Cinzel', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Struktura Scen */
+.scene {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    position: absolute; /* Zapobiega "skakaniu" layoutu */
+    width: 90%;
+}
+
+.scene.active {
+    display: flex;
+}
+
+/* Style Elementów */
+#main-title {
+    font-weight: 400;
+    font-size: 2.5em;
+    animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#birthdate-input {
+    background: none;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 300px;
+}
+
+button {
+    background: none;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.counter-group {
+    margin: 20px 0;
+}
+
+.counter-group h2 {
+    font-size: 1.5em;
+    color: #555555;
+    font-weight: 400;
+}
+
+#wasted-beats {
+    font-size: 3em;
+    color: #555555;
+}
+
+#remaining-beats {
+    font-size: 4.5em;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.inception-container {
+    max-width: 800px;
+}
+
+.inception-text {
+    font-size: 1.2em;
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+#redirect-button {
+    border-color: #D4AF37; /* Złoto */
+    color: #D4AF37;
+    margin-top: 30px;
+}
+
+#redirect-button:hover {
+    background-color: #D4AF37;
+    color: #000000;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+    #main-title { font-size: 1.8em; }
+    #birthdate-input { font-size: 1.5em; width: 250px; }
+    button { font-size: 1.2em; }
+    .counter-group h2 { font-size: 1em; }
+    #wasted-beats { font-size: 2em; }
+    #remaining-beats { font-size: 3em; }
+    .inception-text { font-size: 1em; }
+}
